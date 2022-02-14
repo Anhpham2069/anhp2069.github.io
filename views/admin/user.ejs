@@ -1,0 +1,37 @@
+<%- include("../layout/head") %>
+<body>
+  <style>
+     .td{
+        text-align: center;
+      }
+  </style>
+  <div class="aside" style="border: none">
+    <%- include("../layout/aside_admin") %>
+  </div>
+  <div class="content">
+    <%- include("../layout/nav_admin") %>
+
+    <div class="profile">
+      <div class="container">
+        <h2 style="color: rgb(9, 143, 27);margin-bottom: 30px">Danh sách khách hàng</h2>
+   
+        <table id="example" class="display table table-hover table-condensed" style="border: 1px solid rgb(185, 185, 185);">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Họ tên</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% var id = 0 %> <% user.forEach(function(user){ id++ %>
+            <tr class="td">
+              <td><%= id %></td>
+              <td><%= user.name %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
